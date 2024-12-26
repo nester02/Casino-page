@@ -12,6 +12,11 @@
 <header>
   <div class="__container __container-header">
     <h2 class="header__heading">FirstTest.com</h2>
+    <button class="burger-menu" aria-label="Toggle menu">
+      <span class="burger-menu__line"></span>
+      <span class="burger-menu__line"></span>
+      <span class="burger-menu__line"></span>
+    </button>
     <nav class="header__nav">
       <ul class="nav__list">
         <li class="list__item"><a class="list__item-link" href="../../index.html">Home</a></li>
@@ -75,14 +80,25 @@
   <div class="__container __container-footer">
     <p class="footer__text">&copy; 2024 FirstTest.com. All rights reserved.</p>
     <nav class="footer__nav">
-      <ul class="nav__list">
-        <li class="list__item--footer"><a class="list__item-link" href="index.html">Home</a></li>
-        <li class="list__item--footer"><a class="list__item-link" href="./pages/Hotels/hotels.html">Hotels</a></li>
-        <li class="list__item--footer"><a class="list__item-link" href="./pages/Casino-hotels/casino-hotels.html">Casino Hotels</a></li>
-        <li class="list__item--footer"><a class="list__item-link" href="pages/Contact/contact.html">Contact</a></li>
+      <ul class="nav__list nav__list-footer">
+        <li class="list__item--footer"><a class="list__item-link" href="../../index.html">Home</a></li>
+        <li class="list__item--footer"><a class="list__item-link" href="../Hotels/hotels.html">Hotels</a></li>
+        <li class="list__item--footer"><a class="list__item-link" href="../Casino-hotels/casino-hotels.html">Casino Hotels</a></li>
+        <li class="list__item--footer"><a class="list__item-link" href="../Contact/contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </div>
 </footer>
+
+<script>
+  const burgerMenu = document.querySelector('.burger-menu');
+  const navMenu = document.querySelector('.header__nav');
+
+  burgerMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    burgerMenu.classList.toggle('open');
+  });
+
+</script>
 </body>
 </html>
